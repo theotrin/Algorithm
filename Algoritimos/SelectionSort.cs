@@ -1,5 +1,5 @@
 ﻿namespace Algoritimos;
-
+//A coach of a soccer team ordering the players from smallest to the largest
 internal class SelectionSort
 {
     public void Execute(int[] array)
