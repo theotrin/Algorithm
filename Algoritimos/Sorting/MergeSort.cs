@@ -4,7 +4,7 @@ internal class MergeSort
 {
     public void Execute(int[] array)
     {
-        if (array.Length < 1)
+        if (array.Length <= 1)
             return;
 
         int mid = array.Length / 2;//dividir o array em 2
@@ -18,6 +18,8 @@ internal class MergeSort
         //Chamada recursiva
         Execute(left);
         Execute(right);
+
+        Merge(array, left, right);
     }
 
     private static void Merge(int[] array, int[] left, int[] right)
@@ -25,14 +27,14 @@ internal class MergeSort
         int i = 0, j = 0, k = 0;
 
         // Mesclar enquanto houver elementos em ambas as metades
-        while( i < left.Length && i < right.Length)
+        while (i < left.Length && j < right.Length)
         {
             if (left[i] <= right[j])
                 array[k++] = left[i++];
             else
                 array[k++] = right[j++];
-            
         }
+
         // Adicionar elementos restantes da metade esquerda (se houver)
         while (i < left.Length)
             array[k++] = left[i++];
