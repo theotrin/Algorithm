@@ -1,4 +1,4 @@
-﻿namespace Algoritimos;
+﻿namespace Algoritimos.Sorting;
 
 internal class BubbleSort
 {

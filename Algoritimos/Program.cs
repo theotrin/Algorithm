@@ -1,4 +1,4 @@
-﻿using Algoritimos;
+﻿using Algoritimos.Sorting;
 
 //Bubble Sort
 //{
